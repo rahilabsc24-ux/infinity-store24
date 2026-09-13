@@ -45,8 +45,8 @@ export function getReviews(productId: string, rating: number, count = 5): Review
   const total = Math.min(count, templates.length)
 
   for (let i = 0; i < total; i++) {
-    const t = templates[(seed + i) % templates.length]
-    const author = authors[(seed + i * 3) % authors.length]
+    const t = templates[(seed + i) % templates.length]!
+    const author = authors[(seed + i * 3) % authors.length]!
     const daysAgo = ((seed + i * 17) % 120) + 3
     const date = new Date(Date.now() - daysAgo * 86400000)
     const starOffset = i === total - 1 ? -1 : 0
