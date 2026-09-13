@@ -2,7 +2,7 @@
 
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react"
 import { CheckCircle2, Heart, Info, X } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "@/shop/lib/utils"
 
 export type ToastVariant = "success" | "info" | "wishlist"
 

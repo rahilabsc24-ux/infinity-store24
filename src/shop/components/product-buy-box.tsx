@@ -1,13 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/shop/lib/next-compat"
 import { Minus, Plus, Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { AddToCartButton } from "@/components/add-to-cart-button"
-import { WishlistButton } from "@/components/wishlist-button"
-import { useCart } from "@/lib/cart-context"
-import type { Product } from "@/lib/products"
+import { Button } from "@/shop/components/ui/button"
+import { AddToCartButton } from "@/shop/components/add-to-cart-button"
+import { WishlistButton } from "@/shop/components/wishlist-button"
+import { useCart } from "@/shop/lib/cart-context"
+import type { Product } from "@/shop/lib/products"
 
 export function ProductBuyBox({ product }: { product: Product }) {
   const [quantity, setQuantity] = useState(1)

@@ -1,9 +1,9 @@
 "use client"
 
-import Link from "next/link"
-import { useRouter, useSearchParams } from "next/navigation"
-import { cn } from "@/lib/utils"
-import { categories, type Category } from "@/lib/products"
+import Link from "@/shop/lib/next-compat"
+import { useRouter, useSearchParams } from "@/shop/lib/next-compat"
+import { cn } from "@/shop/lib/utils"
+import { categories, type Category } from "@/shop/lib/products"
 
 const sortOptions = [
   { value: "featured", label: "Featured" },

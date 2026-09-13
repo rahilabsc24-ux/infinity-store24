@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { CheckCircle2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/shop/components/ui/button"
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)

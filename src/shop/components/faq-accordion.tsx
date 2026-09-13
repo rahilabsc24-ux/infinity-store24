@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "@/shop/lib/utils"
 
 export type FaqItem = { question: string; answer: string }
 

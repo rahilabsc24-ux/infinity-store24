@@ -1,12 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
-import { useRouter, useSearchParams } from "next/navigation"
+import Link from "@/shop/lib/next-compat"
+import { useRouter, useSearchParams } from "@/shop/lib/next-compat"
 import { Infinity as InfinityIcon, Menu, Search, ShoppingCart, X, Heart } from "lucide-react"
-import { useCart } from "@/lib/cart-context"
-import { useWishlist } from "@/lib/wishlist-context"
-import { categories } from "@/lib/products"
+import { useCart } from "@/shop/lib/cart-context"
+import { useWishlist } from "@/shop/lib/wishlist-context"
+import { categories } from "@/shop/lib/products"
 
 export function SiteHeader() {
   const { totalItems } = useCart()

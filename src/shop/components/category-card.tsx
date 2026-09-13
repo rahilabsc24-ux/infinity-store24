@@ -1,7 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "@/shop/lib/next-compat"
+import Link from "@/shop/lib/next-compat"
 import { ArrowRight } from "lucide-react"
-import type { Category } from "@/lib/products"
+import type { Category } from "@/shop/lib/products"
 
 export function CategoryCard({
   slug,

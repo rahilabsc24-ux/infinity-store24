@@ -2,9 +2,9 @@
 
 import { useMemo, useState } from "react"
 import { BadgeCheck, ThumbsUp, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useToast } from "@/lib/toast-context"
-import { getReviews, type Review } from "@/lib/reviews"
+import { Button } from "@/shop/components/ui/button"
+import { useToast } from "@/shop/lib/toast-context"
+import { getReviews, type Review } from "@/shop/lib/reviews"
 
 function StarPicker({ value, onChange }: { value: number; onChange: (v: number) => void }) {
   return (

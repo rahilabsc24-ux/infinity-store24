@@ -1,8 +1,8 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "@/shop/lib/next-compat"
+import Link from "@/shop/lib/next-compat"
 import { ArrowRight } from "lucide-react"
-import { buttonVariants } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/shop/components/ui/button"
+import { cn } from "@/shop/lib/utils"
 
 export function Hero() {
   return (

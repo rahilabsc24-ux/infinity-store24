@@ -1,10 +1,10 @@
 "use client"
 
 import { Heart } from "lucide-react"
-import { useWishlist } from "@/lib/wishlist-context"
-import { useToast } from "@/lib/toast-context"
-import { cn } from "@/lib/utils"
-import type { Product } from "@/lib/products"
+import { useWishlist } from "@/shop/lib/wishlist-context"
+import { useToast } from "@/shop/lib/toast-context"
+import { cn } from "@/shop/lib/utils"
+import type { Product } from "@/shop/lib/products"
 
 export function WishlistButton({
   product,

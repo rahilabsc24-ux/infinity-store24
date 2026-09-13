@@ -1,9 +1,9 @@
-import Image from "next/image"
-import Link from "next/link"
-import { StarRating } from "@/components/star-rating"
-import { AddToCartButton } from "@/components/add-to-cart-button"
-import { WishlistButton } from "@/components/wishlist-button"
-import { formatPrice, type Product } from "@/lib/products"
+import Image from "@/shop/lib/next-compat"
+import Link from "@/shop/lib/next-compat"
+import { StarRating } from "@/shop/components/star-rating"
+import { AddToCartButton } from "@/shop/components/add-to-cart-button"
+import { WishlistButton } from "@/shop/components/wishlist-button"
+import { formatPrice, type Product } from "@/shop/lib/products"
 
 export function ProductCard({ product }: { product: Product }) {
   return (

@@ -2,11 +2,11 @@
 
 import { useState } from "react"
 import { Check, ShoppingCart } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useCart } from "@/lib/cart-context"
-import { useToast } from "@/lib/toast-context"
-import { cn } from "@/lib/utils"
-import type { Product } from "@/lib/products"
+import { Button } from "@/shop/components/ui/button"
+import { useCart } from "@/shop/lib/cart-context"
+import { useToast } from "@/shop/lib/toast-context"
+import { cn } from "@/shop/lib/utils"
+import type { Product } from "@/shop/lib/products"
 
 export function AddToCartButton({
   product,
