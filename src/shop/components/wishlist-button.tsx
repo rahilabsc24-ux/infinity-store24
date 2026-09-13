@@ -25,7 +25,7 @@ export function WishlistButton({
     const nowWishlisted = toggle(product.id)
     showToast({
       title: nowWishlisted ? "Added to wishlist" : "Removed from wishlist",
-      description: nowWishlisted ? product.name : undefined,
+      description: nowWishlisted ? product.name : "",
       variant: "wishlist",
       action: nowWishlisted ? { label: "View wishlist", href: "/wishlist" } : undefined,
     })
