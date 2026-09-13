@@ -8,7 +8,7 @@ import {
 import { useMemo, type CSSProperties, type MouseEventHandler, type ReactNode } from "react";
 
 function splitHref(href: string): { path: string; search: Record<string, string> } {
-  const [path, qs] = href.split("?");
+  const [path = "/", qs] = href.split("?");
   return { path, search: Object.fromEntries(new URLSearchParams(qs ?? "")) };
 }
 

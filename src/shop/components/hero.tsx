@@ -1,5 +1,5 @@
-import Image from "@/shop/lib/next-compat"
-import Link from "@/shop/lib/next-compat"
+import { Image } from "@/shop/lib/next-compat"
+import { Link } from "@/shop/lib/next-compat"
 import { ArrowRight } from "lucide-react"
 import { buttonVariants } from "@/shop/components/ui/button"
 import { cn } from "@/shop/lib/utils"

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import Link from "@/shop/lib/next-compat"
+import { Link } from "@/shop/lib/next-compat"
 import { Infinity as InfinityIcon, ShieldCheck, Truck, RefreshCw, Lock, ArrowRight } from "lucide-react"
 import { useToast } from "@/shop/lib/toast-context"
 import { categories } from "@/shop/lib/products"

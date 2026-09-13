@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "@/shop/lib/next-compat"
+import { Link } from "@/shop/lib/next-compat"
 import { useRouter, useSearchParams } from "@/shop/lib/next-compat"
 import { cn } from "@/shop/lib/utils"
 import { categories, type Category } from "@/shop/lib/products"

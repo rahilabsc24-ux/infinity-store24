@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import Link from "@/shop/lib/next-compat"
+import { Link } from "@/shop/lib/next-compat"
 import { useRouter, useSearchParams } from "@/shop/lib/next-compat"
 import { Infinity as InfinityIcon, Menu, Search, ShoppingCart, X, Heart } from "lucide-react"
 import { useCart } from "@/shop/lib/cart-context"

@@ -1,5 +1,5 @@
-import Image from "@/shop/lib/next-compat"
-import Link from "@/shop/lib/next-compat"
+import { Image } from "@/shop/lib/next-compat"
+import { Link } from "@/shop/lib/next-compat"
 import { StarRating } from "@/shop/components/star-rating"
 import { AddToCartButton } from "@/shop/components/add-to-cart-button"
 import { WishlistButton } from "@/shop/components/wishlist-button"
