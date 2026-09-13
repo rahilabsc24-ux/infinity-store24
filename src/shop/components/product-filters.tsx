@@ -16,7 +16,7 @@ export function ProductFilters({
   activeCategory,
   activeSort,
 }: {
-  activeCategory?: Category
+  activeCategory?: Category | undefined
   activeSort: string
 }) {
   const router = useRouter()
