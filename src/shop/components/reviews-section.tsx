@@ -56,7 +56,10 @@ export function ReviewsSection({
 
   const distribution = useMemo(() => {
     const counts = [0, 0, 0, 0, 0]
-    for (const r of reviews) const idx = Math.min(4, Math.max(0, Math.round(r.rating) - 1)); counts[idx] = (counts[idx] ?? 0) + 1
+    for (const r of reviews) {
+      const idx = Math.min(4, Math.max(0, Math.round(r.rating) - 1))
+      counts[idx] = (counts[idx] ?? 0) + 1
+    }
     const totalCount = reviews.length || 1
     return [5, 4, 3, 2, 1].map((stars) => ({
       stars,
