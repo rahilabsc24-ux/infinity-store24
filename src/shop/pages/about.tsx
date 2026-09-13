@@ -1,11 +1,5 @@
-import type { Metadata } from "next"
 import { Image } from "@/shop/lib/next-compat"
 import { Sparkles, Leaf, Users, Globe } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "About Us",
-  description: "Learn about Infinity's story, values, and the team curating dresses, gadgets, and accessories you'll love.",
-}
 
 const values = [
   {

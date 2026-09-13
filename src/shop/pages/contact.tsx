@@ -1,11 +1,5 @@
-import type { Metadata } from "next"
 import { Mail, MessageCircle, MapPin, Clock } from "lucide-react"
 import { ContactForm } from "@/shop/components/contact-form"
-
-export const metadata: Metadata = {
-  title: "Contact Us",
-  description: "Get in touch with the Infinity team about orders, returns, or general questions.",
-}
 
 const channels = [
   { icon: Mail, title: "Email", detail: "support@infinitystore.example", note: "We reply within one business day" },

@@ -1,10 +1,4 @@
-import type { Metadata } from "next"
 import { Truck, RefreshCw, PackageCheck, Clock } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Shipping & Returns",
-  description: "Details on Infinity's shipping timelines, costs, and our 30-day return policy.",
-}
 
 export default function ShippingReturnsPage() {
   return (

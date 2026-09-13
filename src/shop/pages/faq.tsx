@@ -1,10 +1,4 @@
-import type { Metadata } from "next"
 import { FaqAccordion } from "@/shop/components/faq-accordion"
-
-export const metadata: Metadata = {
-  title: "FAQ",
-  description: "Answers to common questions about shipping, returns, sizing, and orders at Infinity.",
-}
 
 const faqs = [
   {
