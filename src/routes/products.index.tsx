@@ -7,7 +7,7 @@ const validCategories = new Set<string>(categories.map((c) => c.slug));
 
 type ProductSearch = { category?: string | undefined; q?: string | undefined; sort?: string | undefined };
 
-export const Route = createFileRoute("/products")({
+export const Route = createFileRoute("/products/")({
   validateSearch: (search: Record<string, unknown>): ProductSearch => ({
     category: typeof search["category"] === "string" ? (search["category"] as string) : undefined,
     q: typeof search["q"] === "string" ? (search["q"] as string) : undefined,
