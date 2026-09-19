@@ -30,7 +30,7 @@ function Field({
   value,
   onChange,
   ...props
-}: React.InputHTMLAttributes<HTMLInputElement> & {
+}: Omit<React.InputHTMLAttributes<HTMLInputElement>, "value" | "onChange"> & {
   label: string;
   value: string;
   onChange: (v: string) => void;

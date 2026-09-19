@@ -11,11 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AccountRouteImport } from './routes/account'
 import { Route as CartRouteImport } from './routes/cart'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as ShippingReturnsRouteImport } from './routes/shipping-returns'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WishlistRouteImport } from './routes/wishlist'
@@ -30,6 +32,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountRoute = AccountRouteImport.update({
+  id: '/account',
+  path: '/account',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CartRoute = CartRouteImport.update({
@@ -55,6 +62,11 @@ const FaqRoute = FaqRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ShippingReturnsRoute = ShippingReturnsRouteImport.update({
@@ -86,11 +98,13 @@ const ProductsIdRoute = ProductsIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/account': typeof AccountRoute
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
+  '/settings': typeof SettingsRoute
   '/shipping-returns': typeof ShippingReturnsRoute
   '/terms': typeof TermsRoute
   '/wishlist': typeof WishlistRoute
@@ -100,11 +114,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/account': typeof AccountRoute
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
+  '/settings': typeof SettingsRoute
   '/shipping-returns': typeof ShippingReturnsRoute
   '/terms': typeof TermsRoute
   '/wishlist': typeof WishlistRoute
@@ -115,11 +131,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/account': typeof AccountRoute
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
+  '/settings': typeof SettingsRoute
   '/shipping-returns': typeof ShippingReturnsRoute
   '/terms': typeof TermsRoute
   '/wishlist': typeof WishlistRoute
@@ -131,11 +149,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/account'
     | '/cart'
     | '/checkout'
     | '/contact'
     | '/faq'
     | '/privacy'
+    | '/settings'
     | '/shipping-returns'
     | '/terms'
     | '/wishlist'
@@ -145,11 +165,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/account'
     | '/cart'
     | '/checkout'
     | '/contact'
     | '/faq'
     | '/privacy'
+    | '/settings'
     | '/shipping-returns'
     | '/terms'
     | '/wishlist'
@@ -159,11 +181,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/account'
     | '/cart'
     | '/checkout'
     | '/contact'
     | '/faq'
     | '/privacy'
+    | '/settings'
     | '/shipping-returns'
     | '/terms'
     | '/wishlist'
@@ -174,11 +198,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AccountRoute: typeof AccountRoute
   CartRoute: typeof CartRoute
   CheckoutRoute: typeof CheckoutRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   PrivacyRoute: typeof PrivacyRoute
+  SettingsRoute: typeof SettingsRoute
   ShippingReturnsRoute: typeof ShippingReturnsRoute
   TermsRoute: typeof TermsRoute
   WishlistRoute: typeof WishlistRoute
@@ -200,6 +226,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/account': {
+      id: '/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AccountRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cart': {
@@ -235,6 +268,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/shipping-returns': {
@@ -278,11 +318,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AccountRoute: AccountRoute,
   CartRoute: CartRoute,
   CheckoutRoute: CheckoutRoute,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   PrivacyRoute: PrivacyRoute,
+  SettingsRoute: SettingsRoute,
   ShippingReturnsRoute: ShippingReturnsRoute,
   TermsRoute: TermsRoute,
   WishlistRoute: WishlistRoute,
