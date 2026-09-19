@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Link } from "@/shop/lib/next-compat"
 import { useRouter, useSearchParams } from "@/shop/lib/next-compat"
-import { Infinity as InfinityIcon, Menu, Search, ShoppingCart, X, Heart } from "lucide-react"
+import { Infinity as InfinityIcon, Menu, Search, ShoppingCart, X, Heart, User } from "lucide-react"
 import { useCart } from "@/shop/lib/cart-context"
 import { useWishlist } from "@/shop/lib/wishlist-context"
 import { categories } from "@/shop/lib/products"
@@ -88,6 +88,13 @@ export function SiteHeader() {
             </span>
           </Link>
           <Link
+            href="/account"
+            aria-label="Account"
+            className="relative hidden items-center gap-2 rounded-full px-2 py-1.5 text-sm font-medium transition-colors hover:text-cta sm:flex"
+          >
+            <User className="size-6" />
+          </Link>
+          <Link
             href="/cart"
             className="relative flex items-center gap-2 rounded-full px-2 py-1.5 text-sm font-medium transition-colors hover:text-cta"
           >
@@ -153,6 +160,20 @@ export function SiteHeader() {
               className="rounded-lg px-2 py-2 text-sm font-medium text-brand-foreground/90 hover:bg-brand-foreground/10"
             >
               Wishlist{wishlistCount > 0 ? ` (${wishlistCount})` : ""}
+            </Link>
+            <Link
+              href="/account"
+              onClick={() => setMenuOpen(false)}
+              className="rounded-lg px-2 py-2 text-sm font-medium text-brand-foreground/90 hover:bg-brand-foreground/10"
+            >
+              Account
+            </Link>
+            <Link
+              href="/settings"
+              onClick={() => setMenuOpen(false)}
+              className="rounded-lg px-2 py-2 text-sm font-medium text-brand-foreground/90 hover:bg-brand-foreground/10"
+            >
+              Settings
             </Link>
           </nav>
         </div>
