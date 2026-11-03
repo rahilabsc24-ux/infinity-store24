@@ -1,14 +1,3 @@
-# Peek A Boo
-
-can i preview it
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://infinity-store24.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/85034b47-4931-42a0-86ba-c894e5bcb2f4).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.
